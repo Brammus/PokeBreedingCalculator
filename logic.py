@@ -74,12 +74,14 @@ if parent_power_items > 0 and parent_power_inherit == 1:
     item_stat = power_items[parent_item]
     parent_stat = parent_1['individual_values'][item_stat]
     baby_pokemon['individual_values'][item_stat] = parent_stat
+    ivs_to_set = ivs_to_set - 1
 elif parent_power_items > 0 and parent_power_inherit == 2:
     # inherit from parent_2
     parent_item = parent_2['held_item']
     item_stat = power_items[parent_item]
     parent_stat = parent_2['individual_values'][item_stat]
     baby_pokemon['individual_values'][item_stat] = parent_stat
+    ivs_to_set = ivs_to_set - 1
 
 
 # inheriting IVs
